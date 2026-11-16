@@ -4,7 +4,9 @@
 
 **The answer:** in 16 of 66 runs (24%; 16 of the 60 runs on a changed page) the generated tools returned wrong data and reported success. The repair loop never saw those runs, because it only starts on an error. A schema check on the output caught 3 of them. Four checks against the page (no error banner, row count, total digits, re-read after an action) caught the other 13: 0 silent failures in 66 runs. Of the 16, 8 were then repaired to correct, 5 ended with the correct error, and 3 stayed errors.
 
-> Exploratory PoC, throwaway by default.
+> Exploratory PoC, throwaway by default. Written up in
+> [AI-Generated Playwright Tools: 1 in 4 Runs Returned Wrong Data With No Error](https://garyparker.dev/blog/ai-generated-playwright-tools-silent-failures).
+> Video: [youtu.be/lMKT-9azMO4](https://youtu.be/lMKT-9azMO4).
 
 ## Method
 
@@ -87,6 +89,6 @@ node harness/run.mjs --gens 3     # reuses results/tools/*.mjs; delete them to g
 node app/server.mjs late-rows      # serve one version on :4310
 ```
 
-Generation needs a logged-in `claude` CLI.
+Generation needs a logged-in `claude` CLI. The video is recorded from `video/`: `npx playwright test -c video/playwright.config.ts` replays `results/runs.json` on `stage.html` and adds the narration (needs a local `~/bin/tts`).
 
 MIT. Independent experiment; no affiliation with Anthropic, Microsoft or any vendor.
