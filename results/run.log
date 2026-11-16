@@ -1,0 +1,205 @@
+generating gen1
+gen1 baseline       list   generated        correct (repairs 0)
+gen1 baseline       list   generated+schema correct (repairs 0)
+gen1 baseline       cancel generated        correct (repairs 0)
+gen1 baseline       cancel generated+schema correct (repairs 0)
+  repair 1 gen1 css-rename list generated
+gen1 css-rename     list   generated        correct (repairs 1)
+  repair 1 gen1 css-rename list generated+schema
+gen1 css-rename     list   generated+schema correct (repairs 1)
+  repair 1 gen1 css-rename cancel generated
+gen1 css-rename     cancel generated        correct (repairs 1)
+  repair 1 gen1 css-rename cancel generated+schema
+gen1 css-rename     cancel generated+schema correct (repairs 1)
+gen1 column-swap    list   generated        correct (repairs 0)
+gen1 column-swap    list   generated+schema correct (repairs 0)
+gen1 column-swap    cancel generated        correct (repairs 0)
+gen1 column-swap    cancel generated+schema correct (repairs 0)
+gen1 locale-format  list   generated        silent (repairs 0)
+gen1 locale-format  list   generated+schema silent (repairs 0)
+gen1 locale-format  cancel generated        correct (repairs 0)
+gen1 locale-format  cancel generated+schema correct (repairs 0)
+gen1 api-rename     list   generated        silent (repairs 0)
+  repair 1 gen1 api-rename list generated+schema
+  repair 2 gen1 api-rename list generated+schema
+gen1 api-rename     list   generated+schema correct (repairs 2)
+gen1 api-rename     cancel generated        correct (repairs 0)
+gen1 api-rename     cancel generated+schema correct (repairs 0)
+gen1 late-rows      list   generated        correct (repairs 0)
+gen1 late-rows      list   generated+schema correct (repairs 0)
+gen1 late-rows      cancel generated        correct (repairs 0)
+gen1 late-rows      cancel generated+schema correct (repairs 0)
+gen1 paginated      list   generated        correct (repairs 0)
+gen1 paginated      list   generated+schema correct (repairs 0)
+gen1 paginated      cancel generated        correct (repairs 0)
+gen1 paginated      cancel generated+schema correct (repairs 0)
+gen1 soft-error     list   generated        silent (repairs 0)
+gen1 soft-error     list   generated+schema silent (repairs 0)
+  repair 1 gen1 soft-error cancel generated
+  repair 2 gen1 soft-error cancel generated
+gen1 soft-error     cancel generated        loud (repairs 2)
+  repair 1 gen1 soft-error cancel generated+schema
+  repair 2 gen1 soft-error cancel generated+schema
+gen1 soft-error     cancel generated+schema loud (repairs 2)
+gen1 cancel-409     list   generated        correct (repairs 0)
+gen1 cancel-409     list   generated+schema correct (repairs 0)
+gen1 cancel-409     cancel generated        silent (repairs 0)
+gen1 cancel-409     cancel generated+schema silent (repairs 0)
+gen1 cancel-confirm list   generated        correct (repairs 0)
+gen1 cancel-confirm list   generated+schema correct (repairs 0)
+  repair 1 gen1 cancel-confirm cancel generated
+gen1 cancel-confirm cancel generated        correct (repairs 1)
+  repair 1 gen1 cancel-confirm cancel generated+schema
+gen1 cancel-confirm cancel generated+schema correct (repairs 1)
+gen1 card-layout    list   generated        silent (repairs 0)
+gen1 card-layout    list   generated+schema silent (repairs 0)
+  repair 1 gen1 card-layout cancel generated
+gen1 card-layout    cancel generated        correct (repairs 1)
+  repair 1 gen1 card-layout cancel generated+schema
+gen1 card-layout    cancel generated+schema correct (repairs 1)
+generating gen2
+gen2 baseline       list   generated        correct (repairs 0)
+gen2 baseline       list   generated+schema correct (repairs 0)
+gen2 baseline       cancel generated        correct (repairs 0)
+gen2 baseline       cancel generated+schema correct (repairs 0)
+  repair 1 gen2 css-rename list generated
+gen2 css-rename     list   generated        correct (repairs 1)
+  repair 1 gen2 css-rename list generated+schema
+gen2 css-rename     list   generated+schema correct (repairs 1)
+  repair 1 gen2 css-rename cancel generated
+gen2 css-rename     cancel generated        correct (repairs 1)
+  repair 1 gen2 css-rename cancel generated+schema
+gen2 css-rename     cancel generated+schema correct (repairs 1)
+gen2 column-swap    list   generated        correct (repairs 0)
+gen2 column-swap    list   generated+schema correct (repairs 0)
+gen2 column-swap    cancel generated        correct (repairs 0)
+gen2 column-swap    cancel generated+schema correct (repairs 0)
+gen2 locale-format  list   generated        silent (repairs 0)
+gen2 locale-format  list   generated+schema silent (repairs 0)
+gen2 locale-format  cancel generated        correct (repairs 0)
+gen2 locale-format  cancel generated+schema correct (repairs 0)
+gen2 api-rename     list   generated        silent (repairs 0)
+  repair 1 gen2 api-rename list generated+schema
+  repair 2 gen2 api-rename list generated+schema
+gen2 api-rename     list   generated+schema loud (repairs 2)
+gen2 api-rename     cancel generated        correct (repairs 0)
+gen2 api-rename     cancel generated+schema correct (repairs 0)
+gen2 late-rows      list   generated        silent (repairs 0)
+gen2 late-rows      list   generated+schema silent (repairs 0)
+  repair 1 gen2 late-rows cancel generated
+  repair 2 gen2 late-rows cancel generated
+gen2 late-rows      cancel generated        loud (repairs 2)
+  repair 1 gen2 late-rows cancel generated+schema
+  repair 2 gen2 late-rows cancel generated+schema
+gen2 late-rows      cancel generated+schema loud (repairs 2)
+gen2 paginated      list   generated        correct (repairs 0)
+gen2 paginated      list   generated+schema correct (repairs 0)
+gen2 paginated      cancel generated        correct (repairs 0)
+gen2 paginated      cancel generated+schema correct (repairs 0)
+gen2 soft-error     list   generated        correct (repairs 0)
+gen2 soft-error     list   generated+schema correct (repairs 0)
+  repair 1 gen2 soft-error cancel generated
+  repair 2 gen2 soft-error cancel generated
+gen2 soft-error     cancel generated        loud (repairs 2)
+  repair 1 gen2 soft-error cancel generated+schema
+  repair 2 gen2 soft-error cancel generated+schema
+gen2 soft-error     cancel generated+schema loud (repairs 2)
+gen2 cancel-409     list   generated        correct (repairs 0)
+gen2 cancel-409     list   generated+schema correct (repairs 0)
+gen2 cancel-409     cancel generated        silent (repairs 0)
+gen2 cancel-409     cancel generated+schema silent (repairs 0)
+gen2 cancel-confirm list   generated        correct (repairs 0)
+gen2 cancel-confirm list   generated+schema correct (repairs 0)
+gen2 cancel-confirm cancel generated        correct (repairs 0)
+gen2 cancel-confirm cancel generated+schema correct (repairs 0)
+  repair 1 gen2 card-layout list generated
+gen2 card-layout    list   generated        correct (repairs 1)
+  repair 1 gen2 card-layout list generated+schema
+gen2 card-layout    list   generated+schema correct (repairs 1)
+  repair 1 gen2 card-layout cancel generated
+gen2 card-layout    cancel generated        correct (repairs 1)
+  repair 1 gen2 card-layout cancel generated+schema
+gen2 card-layout    cancel generated+schema correct (repairs 1)
+generating gen3
+gen3 baseline       list   generated        correct (repairs 0)
+gen3 baseline       list   generated+schema correct (repairs 0)
+gen3 baseline       cancel generated        correct (repairs 0)
+gen3 baseline       cancel generated+schema correct (repairs 0)
+gen3 css-rename     list   generated        silent (repairs 0)
+gen3 css-rename     list   generated+schema silent (repairs 0)
+  repair 1 gen3 css-rename cancel generated
+gen3 css-rename     cancel generated        correct (repairs 1)
+  repair 1 gen3 css-rename cancel generated+schema
+gen3 css-rename     cancel generated+schema correct (repairs 1)
+gen3 column-swap    list   generated        correct (repairs 0)
+gen3 column-swap    list   generated+schema correct (repairs 0)
+gen3 column-swap    cancel generated        correct (repairs 0)
+gen3 column-swap    cancel generated+schema correct (repairs 0)
+gen3 locale-format  list   generated        silent (repairs 0)
+gen3 locale-format  list   generated+schema silent (repairs 0)
+gen3 locale-format  cancel generated        correct (repairs 0)
+gen3 locale-format  cancel generated+schema correct (repairs 0)
+gen3 api-rename     list   generated        silent (repairs 0)
+  repair 1 gen3 api-rename list generated+schema
+  repair 2 gen3 api-rename list generated+schema
+gen3 api-rename     list   generated+schema loud (repairs 2)
+gen3 api-rename     cancel generated        correct (repairs 0)
+gen3 api-rename     cancel generated+schema correct (repairs 0)
+gen3 late-rows      list   generated        silent (repairs 0)
+gen3 late-rows      list   generated+schema silent (repairs 0)
+  repair 1 gen3 late-rows cancel generated
+  repair 2 gen3 late-rows cancel generated
+gen3 late-rows      cancel generated        loud (repairs 2)
+  repair 1 gen3 late-rows cancel generated+schema
+  repair 2 gen3 late-rows cancel generated+schema
+gen3 late-rows      cancel generated+schema loud (repairs 2)
+gen3 paginated      list   generated        correct (repairs 0)
+gen3 paginated      list   generated+schema correct (repairs 0)
+gen3 paginated      cancel generated        correct (repairs 0)
+gen3 paginated      cancel generated+schema correct (repairs 0)
+gen3 soft-error     list   generated        silent (repairs 0)
+gen3 soft-error     list   generated+schema silent (repairs 0)
+  repair 1 gen3 soft-error cancel generated
+  repair 2 gen3 soft-error cancel generated
+gen3 soft-error     cancel generated        loud (repairs 2)
+  repair 1 gen3 soft-error cancel generated+schema
+  repair 2 gen3 soft-error cancel generated+schema
+gen3 soft-error     cancel generated+schema loud (repairs 2)
+gen3 cancel-409     list   generated        correct (repairs 0)
+gen3 cancel-409     list   generated+schema correct (repairs 0)
+gen3 cancel-409     cancel generated        silent (repairs 0)
+gen3 cancel-409     cancel generated+schema silent (repairs 0)
+gen3 cancel-confirm list   generated        correct (repairs 0)
+gen3 cancel-confirm list   generated+schema correct (repairs 0)
+  repair 1 gen3 cancel-confirm cancel generated
+gen3 cancel-confirm cancel generated        correct (repairs 1)
+  repair 1 gen3 cancel-confirm cancel generated+schema
+gen3 cancel-confirm cancel generated+schema correct (repairs 1)
+gen3 card-layout    list   generated        silent (repairs 0)
+gen3 card-layout    list   generated+schema silent (repairs 0)
+  repair 1 gen3 card-layout cancel generated
+gen3 card-layout    cancel generated        correct (repairs 1)
+  repair 1 gen3 card-layout cancel generated+schema
+gen3 card-layout    cancel generated+schema correct (repairs 1)
+hand baseline       list   handwritten      correct
+hand baseline       cancel handwritten      correct
+hand css-rename     list   handwritten      correct
+hand css-rename     cancel handwritten      correct
+hand column-swap    list   handwritten      loud
+hand column-swap    cancel handwritten      correct
+hand locale-format  list   handwritten      loud
+hand locale-format  cancel handwritten      correct
+hand api-rename     list   handwritten      loud
+hand api-rename     cancel handwritten      correct
+hand late-rows      list   handwritten      correct
+hand late-rows      cancel handwritten      correct
+hand paginated      list   handwritten      loud
+hand paginated      cancel handwritten      correct
+hand soft-error     list   handwritten      correct
+hand soft-error     cancel handwritten      loud
+hand cancel-409     list   handwritten      correct
+hand cancel-409     cancel handwritten      correct
+hand cancel-confirm list   handwritten      correct
+hand cancel-confirm cancel handwritten      loud
+hand card-layout    list   handwritten      loud
+hand card-layout    cancel handwritten      loud

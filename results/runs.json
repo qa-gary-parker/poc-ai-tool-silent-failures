@@ -1,0 +1,3924 @@
+[
+  {
+    "gen": 1,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 561
+  },
+  {
+    "gen": 1,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 540
+  },
+  {
+    "gen": 1,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 575
+  },
+  {
+    "gen": 1,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 584
+  },
+  {
+    "gen": 1,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 39
+  },
+  {
+    "gen": 1,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 39
+  },
+  {
+    "gen": 1,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 82
+  },
+  {
+    "gen": 1,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 90
+  },
+  {
+    "gen": 1,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 539
+  },
+  {
+    "gen": 1,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 533
+  },
+  {
+    "gen": 1,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 568
+  },
+  {
+    "gen": 1,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 566
+  },
+  {
+    "gen": 1,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 532
+  },
+  {
+    "gen": 1,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 530
+  },
+  {
+    "gen": 1,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 564
+  },
+  {
+    "gen": 1,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 582
+  },
+  {
+    "gen": 1,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 0
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 0
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 0
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 0
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 0
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 0
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 0
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 0
+      }
+    ],
+    "ms": 531
+  },
+  {
+    "gen": 1,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 15533
+  },
+  {
+    "gen": 1,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 639
+  },
+  {
+    "gen": 1,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 583
+  },
+  {
+    "gen": 1,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 3038
+  },
+  {
+    "gen": 1,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 3037
+  },
+  {
+    "gen": 1,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 3067
+  },
+  {
+    "gen": 1,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 3090
+  },
+  {
+    "gen": 1,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 579
+  },
+  {
+    "gen": 1,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 546
+  },
+  {
+    "gen": 1,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 565
+  },
+  {
+    "gen": 1,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 566
+  },
+  {
+    "gen": 1,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 5535
+  },
+  {
+    "gen": 1,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 5533
+  },
+  {
+    "gen": 1,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "The orders page failed to load after 4 attempts (site reported: \"We couldn't load your orders. Try again later.\"). This is a site-side error, not a missing order; try again later.",
+    "ms": 11126
+  },
+  {
+    "gen": 1,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Orders failed to load after 6 attempts: We couldn't load your orders. Try again later.",
+    "ms": 36675
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 534
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 534
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 566
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 581
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 536
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 531
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 622
+  },
+  {
+    "gen": 1,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 615
+  },
+  {
+    "gen": 1,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 5538
+  },
+  {
+    "gen": 1,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 5537
+  },
+  {
+    "gen": 1,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 165
+  },
+  {
+    "gen": 1,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 569
+  },
+  {
+    "gen": 2,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 37
+  },
+  {
+    "gen": 2,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 35
+  },
+  {
+    "gen": 2,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 83
+  },
+  {
+    "gen": 2,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 35
+  },
+  {
+    "gen": 2,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 34
+  },
+  {
+    "gen": 2,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 82
+  },
+  {
+    "gen": 2,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 2,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 2,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 80
+  },
+  {
+    "gen": 2,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 138
+  },
+  {
+    "gen": 2,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 35
+  },
+  {
+    "gen": 2,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 35
+  },
+  {
+    "gen": 2,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 82
+  },
+  {
+    "gen": 2,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 89
+  },
+  {
+    "gen": 2,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 0
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 0
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 0
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 0
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 0
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 0
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 0
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 0
+      }
+    ],
+    "ms": 31
+  },
+  {
+    "gen": 2,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Order A-1001 has no valid total (got \"—\")",
+    "ms": 20039
+  },
+  {
+    "gen": 2,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 83
+  },
+  {
+    "gen": 2,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 82
+  },
+  {
+    "gen": 2,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 26
+  },
+  {
+    "gen": 2,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 26
+  },
+  {
+    "gen": 2,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "tool reported cancelled: false",
+    "result": {
+      "cancelled": false,
+      "id": "A-1003"
+    },
+    "ms": 27
+  },
+  {
+    "gen": 2,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "[\n  {\n    \"received\": false,\n    \"code\": \"invalid_literal\",\n    \"expected\": true,\n    \"path\": [\n      \"cancelled\"\n    ],\n    \"message\": \"Invalid literal value, expected true\"\n  }\n]",
+    "result": {
+      "cancelled": false,
+      "id": "A-1003"
+    },
+    "ms": 31
+  },
+  {
+    "gen": 2,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 60
+  },
+  {
+    "gen": 2,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 61
+  },
+  {
+    "gen": 2,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 79
+  },
+  {
+    "gen": 2,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "error": "page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#orders-root table') to be visible\u001b[22m\n\u001b[2m    34 × locator resolved to hidden <table class=\"orders\">…</table>\u001b[22m\n",
+    "ms": 15016
+  },
+  {
+    "gen": 2,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "error": "page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#orders-root table') to be visible\u001b[22m\n\u001b[2m    34 × locator resolved to hidden <table class=\"orders\">…</table>\u001b[22m\n",
+    "ms": 15014
+  },
+  {
+    "gen": 2,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Orders page failed to load: We couldn't load your orders. Try again later.",
+    "ms": 3078
+  },
+  {
+    "gen": 2,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Orders page failed to load: We couldn't load your orders. Try again later.",
+    "ms": 11603
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 34
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 30
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 32
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 115
+  },
+  {
+    "gen": 2,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 111
+  },
+  {
+    "gen": 2,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 34
+  },
+  {
+    "gen": 2,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 34
+  },
+  {
+    "gen": 2,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 81
+  },
+  {
+    "gen": 2,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 82
+  },
+  {
+    "gen": 3,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 3,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 3,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1060
+  },
+  {
+    "gen": 3,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1062
+  },
+  {
+    "gen": 3,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10023
+  },
+  {
+    "gen": 3,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10019
+  },
+  {
+    "gen": 3,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1064
+  },
+  {
+    "gen": 3,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1062
+  },
+  {
+    "gen": 3,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 3,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 3,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1062
+  },
+  {
+    "gen": 3,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1061
+  },
+  {
+    "gen": 3,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 32
+  },
+  {
+    "gen": 3,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1.2345
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 42000
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 1525
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 7770
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 64010
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 1200
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2.5
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 5840
+      }
+    ],
+    "ms": 32
+  },
+  {
+    "gen": 3,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1065
+  },
+  {
+    "gen": 3,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1061
+  },
+  {
+    "gen": 3,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 0
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 0
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 0
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 0
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 0
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 0
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 0
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 0
+      }
+    ],
+    "ms": 29
+  },
+  {
+    "gen": 3,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Could not read a numeric total for order A-1001 (got \"—\") after waiting 30000ms",
+    "ms": 30254
+  },
+  {
+    "gen": 3,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1064
+  },
+  {
+    "gen": 3,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1060
+  },
+  {
+    "gen": 3,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 27
+  },
+  {
+    "gen": 3,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 27
+  },
+  {
+    "gen": 3,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "tool reported cancelled: false",
+    "result": {
+      "cancelled": false,
+      "id": "A-1003"
+    },
+    "ms": 29
+  },
+  {
+    "gen": 3,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "[\n  {\n    \"received\": false,\n    \"code\": \"invalid_literal\",\n    \"expected\": true,\n    \"path\": [\n      \"cancelled\"\n    ],\n    \"message\": \"Invalid literal value, expected true\"\n  }\n]",
+    "result": {
+      "cancelled": false,
+      "id": "A-1003"
+    },
+    "ms": 30
+  },
+  {
+    "gen": 3,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 60
+  },
+  {
+    "gen": 3,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 61
+  },
+  {
+    "gen": 3,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1061
+  },
+  {
+    "gen": 3,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1060
+  },
+  {
+    "gen": 3,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10023
+  },
+  {
+    "gen": 3,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10019
+  },
+  {
+    "gen": 3,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "Orders page failed to load after 5 attempts: We couldn't load your orders. Try again later.",
+    "ms": 62634
+  },
+  {
+    "gen": 3,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 2,
+    "outcome": "loud",
+    "error": "[\n  {\n    \"received\": false,\n    \"code\": \"invalid_literal\",\n    \"expected\": true,\n    \"path\": [\n      \"cancelled\"\n    ],\n    \"message\": \"Invalid literal value, expected true\"\n  }\n]",
+    "result": {
+      "cancelled": false,
+      "id": "A-1003"
+    },
+    "ms": 115512
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 36
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 32
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1061
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1059
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 32
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 33
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 119
+  },
+  {
+    "gen": 3,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 143
+  },
+  {
+    "gen": 3,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10023
+  },
+  {
+    "gen": 3,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "generated+schema",
+    "repairs": 0,
+    "outcome": "silent",
+    "result": [],
+    "ms": 10023
+  },
+  {
+    "gen": 3,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1078
+  },
+  {
+    "gen": 3,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "generated+schema",
+    "repairs": 1,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 1071
+  },
+  {
+    "gen": 0,
+    "drift": "baseline",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 43
+  },
+  {
+    "gen": 0,
+    "drift": "baseline",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 100
+  },
+  {
+    "gen": 0,
+    "drift": "css-rename",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 49
+  },
+  {
+    "gen": 0,
+    "drift": "css-rename",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 121
+  },
+  {
+    "gen": 0,
+    "drift": "column-swap",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 1\n\n  Array [\n    \"Order\",\n-   \"Customer\",\n    \"Total\",\n+   \"Customer\",\n  ]",
+    "ms": 33
+  },
+  {
+    "gen": 0,
+    "drift": "column-swap",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 100
+  },
+  {
+    "gen": 0,
+    "drift": "locale-format",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "unexpected money format: \"1.234,50 €\"",
+    "ms": 37
+  },
+  {
+    "gen": 0,
+    "drift": "locale-format",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 100
+  },
+  {
+    "gen": 0,
+    "drift": "api-rename",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "unexpected money format: \"—\"",
+    "ms": 53
+  },
+  {
+    "gen": 0,
+    "drift": "api-rename",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 114
+  },
+  {
+    "gen": 0,
+    "drift": "late-rows",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 2551
+  },
+  {
+    "gen": 0,
+    "drift": "late-rows",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 5411
+  },
+  {
+    "gen": 0,
+    "drift": "paginated",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('table').locator('tbody tr')\nExpected: 8\nReceived: 5\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('table').locator('tbody tr') with timeout 5000ms\n  - waiting for getByRole('table').locator('tbody tr')\n    14 × locator resolved to 5 elements\n       - unexpected value \"5\"",
+    "ms": 5040
+  },
+  {
+    "gen": 0,
+    "drift": "paginated",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": {
+      "cancelled": true,
+      "id": "A-1003"
+    },
+    "ms": 102
+  },
+  {
+    "gen": 0,
+    "drift": "soft-error",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "error": "expect(locator).toHaveCount(expected) failed\n\nLocator:  getByRole('alert')\nExpected: 0\nReceived: 1\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" getByRole('alert') with timeout 5000ms\n  - waiting for getByRole('alert')\n    14 × locator resolved to 1 element\n       - unexpected value \"1\"",
+    "ms": 5023
+  },
+  {
+    "gen": 0,
+    "drift": "soft-error",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('tr[data-id=\"A-1003\"]').getByRole('button', { name: 'Cancel' })\u001b[22m\n",
+    "ms": 8011
+  },
+  {
+    "gen": 0,
+    "drift": "cancel-409",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 49
+  },
+  {
+    "gen": 0,
+    "drift": "cancel-409",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "error": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('tr[data-id=\"A-1003\"]')\nExpected: 0\nReceived: 1\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('tr[data-id=\"A-1003\"]') with timeout 5000ms\n  - waiting for locator('tr[data-id=\"A-1003\"]')\n    14 × locator resolved to 1 element\n       - unexpected value \"1\"",
+    "ms": 5103
+  },
+  {
+    "gen": 0,
+    "drift": "cancel-confirm",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "correct",
+    "result": [
+      {
+        "id": "A-1001",
+        "customer": "Northwind Ltd",
+        "total": 1234.5
+      },
+      {
+        "id": "A-1003",
+        "customer": "Fabrikam",
+        "total": 420
+      },
+      {
+        "id": "A-1004",
+        "customer": "Tailspin Toys",
+        "total": 15.25
+      },
+      {
+        "id": "A-1006",
+        "customer": "Adventure Works",
+        "total": 77.7
+      },
+      {
+        "id": "A-1007",
+        "customer": "Wingtip",
+        "total": 640.1
+      },
+      {
+        "id": "A-1008",
+        "customer": "Proseware",
+        "total": 12
+      },
+      {
+        "id": "A-1010",
+        "customer": "Coho Winery",
+        "total": 2500
+      },
+      {
+        "id": "A-1011",
+        "customer": "Alpine Ski",
+        "total": 58.4
+      }
+    ],
+    "ms": 41
+  },
+  {
+    "gen": 0,
+    "drift": "cancel-confirm",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "expect(locator).toHaveText(expected) failed\n\nLocator: getByRole('status')\nExpected: \"Order A-1003 cancelled\"\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toHaveText\" getByRole('status') with timeout 5000ms\n  - waiting for getByRole('status')\n",
+    "ms": 5059
+  },
+  {
+    "gen": 0,
+    "drift": "card-layout",
+    "task": "list",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "expect(received).toEqual(expected) // deep equality\n\n- Expected  - 5\n+ Received  + 1\n\n- Array [\n-   \"Order\",\n-   \"Customer\",\n-   \"Total\",\n- ]\n+ Array []",
+    "ms": 38
+  },
+  {
+    "gen": 0,
+    "drift": "card-layout",
+    "task": "cancel",
+    "arm": "handwritten",
+    "repairs": 0,
+    "outcome": "loud",
+    "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('tr[data-id=\"A-1003\"]').getByRole('button', { name: 'Cancel' })\u001b[22m\n",
+    "ms": 8016
+  }
+]
