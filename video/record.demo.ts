@@ -1,6 +1,6 @@
 // Records the walkthrough from results/runs.json on stage.html, timed to the narration.
 import { test, type Page } from '@playwright/test';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import * as crypto from 'node:crypto';
 import * as fs from 'node:fs';
 import * as os from 'node:os';
@@ -10,8 +10,16 @@ import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
 const outDir = path.join(here, 'out');
-const SPEED = '1.15';
+const SPEED = process.env.SPEED ?? '1.15';
+const VOICE = process.env.VOICE ?? '';
+// Cache key for a cloned voice includes the reference clip, so a new reference re-renders every line.
+const voiceRef = path.join(os.homedir(), '.local/share/voice', VOICE + '.wav');
+const VOICE_KEY = VOICE && fs.existsSync(voiceRef) ? `${VOICE}:${crypto.createHash('sha1').update(fs.readFileSync(voiceRef)).digest('hex').slice(0, 8)}` : VOICE;
+// HQ=1: 2x-DPR CDP screencast instead of recordVideo, voice chain, -14 LUFS, variable pauses, room tone
+const HQ = !!process.env.HQ;
 const GAP = 550;
+const GAP_IN = 380; // HQ: pause within a chapter
+const GAP_OUT = 1000; // HQ: pause before a new chapter
 // FAST=1: no narration, one screenshot per step in out/frames, no video
 const FAST = !!process.env.FAST;
 
@@ -53,8 +61,8 @@ function speech(text: string) {
   if (FAST) return { wav: '', seconds: 0.3 };
   const dir = path.join(outDir, 'tts');
   fs.mkdirSync(dir, { recursive: true });
-  const wav = path.join(dir, crypto.createHash('sha1').update(SPEED + text).digest('hex').slice(0, 12) + '.wav');
-  if (!fs.existsSync(wav)) execFileSync(path.join(os.homedir(), 'bin/tts'), ['-s', SPEED, '-o', wav, text]);
+  const wav = path.join(dir, crypto.createHash('sha1').update(VOICE_KEY + SPEED + text).digest('hex').slice(0, 12) + '.wav');
+  if (!fs.existsSync(wav)) execFileSync(path.join(os.homedir(), 'bin/tts'), [...(VOICE ? ['-v', VOICE] : []), '-s', SPEED, '-o', wav, text]);
   const seconds = Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav], { encoding: 'utf8' }));
   return { wav, seconds };
 }
@@ -128,7 +136,7 @@ const steps: Step[] = [
   },
   {
     cap: 'Some changes only move things around',
-    say: 'Some only change how the page looks. Classes renamed, columns swapped, cards in place of a table, five orders per page, a confirm dialog before a cancel.',
+    say: 'Some only change how the page looks. Classes renamed, columns swapped, cards in place of a table, five orders per page, a confirmation dialog before a cancel.',
   },
   {
     cap: 'German format: 1.234,50 €',
@@ -304,7 +312,7 @@ const steps: Step[] = [
   },
   {
     cap: '13 still silent: [] and 1.2345 pass a schema',
-    say: 'Thirteen runs stay silent. An empty list is a valid list. One point two three four five is a positive number. A schema checks the shape of an answer, not whether it is true.',
+    say: 'Thirteen runs stay silent. An empty list is a valid list. A total of one point two three four five is still a positive number. A schema checks the shape of an answer, not whether it is true.',
   },
 
   {
@@ -438,7 +446,7 @@ const steps: Step[] = [
   },
   {
     cap: '4. A schema is the floor',
-    say: 'Four. Treat a schema as the floor. It catches missing values. It does not catch wrong ones.',
+    say: 'Four. Treat a schema as the bare minimum. It catches missing values. It does not catch wrong ones.',
     act: (S) => S('append', '#todo', '<li><b>4</b>A schema is the floor<span>16 → 13 silent runs</span></li>'),
   },
 ];
@@ -447,14 +455,38 @@ const END_SECONDS = 10;
 const END_SAY = 'The code, every generated tool, and the write-up are linked in the description.';
 
 test('record the walkthrough', async ({ browser }, testInfo) => {
-  const lines = [...steps.map((s) => s.say), END_SAY].map(speech);
+  const says = [...steps.map((s) => s.say), END_SAY];
+  let lines = says.map(speech);
+  if (VOICE && !FAST) {
+    const tsv = path.join(outDir, 'narration-pre.tsv');
+    fs.writeFileSync(tsv, says.map((s) => `0\t${s}`).join('\n') + '\n');
+    execFileSync(path.join(os.homedir(), 'bin/tts-check'), [tsv, path.join(outDir, 'tts'), VOICE, SPEED, '4'], { stdio: 'inherit' });
+    lines = says.map(speech);
+  }
   const viewport = testInfo.project.use.viewport!;
-  const context = await browser.newContext({ viewport, recordVideo: { dir: testInfo.outputDir, size: viewport } });
+  const context = await browser.newContext(HQ
+    ? { viewport, deviceScaleFactor: 2 }
+    : { viewport, recordVideo: { dir: testInfo.outputDir, size: viewport } });
   const page: Page = await context.newPage();
+  const frames: { t: number; file: string }[] = [];
+  const frameDir = path.join(outDir, 'hq-frames');
+  let cdp: Awaited<ReturnType<typeof context.newCDPSession>> | undefined;
+  if (HQ && !FAST) {
+    fs.rmSync(frameDir, { recursive: true, force: true });
+    fs.mkdirSync(frameDir, { recursive: true });
+    cdp = await context.newCDPSession(page);
+    cdp.on('Page.screencastFrame', ({ data, metadata, sessionId }) => {
+      const file = path.join(frameDir, `${String(frames.length).padStart(6, '0')}.jpg`);
+      fs.writeFileSync(file, Buffer.from(data, 'base64'));
+      frames.push({ t: metadata.timestamp! * 1000, file });
+      cdp!.send('Page.screencastFrameAck', { sessionId }).catch(() => {});
+    });
+  }
   await page.goto('file://' + path.join(here, 'stage.html'));
   await page.evaluate(() => document.fonts.ready);
   const S: Stage = (fn, ...args) => page.evaluate(([f, a]) => (window as any).S[f as string](...(a as unknown[])), [fn, args] as const);
 
+  if (cdp) await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, maxWidth: viewport.width, maxHeight: viewport.height, everyNthFrame: 1 });
   const start = Date.now();
   const at = () => (Date.now() - start) / 1000;
   const cues: { at: number; wav: string; say: string }[] = [];
@@ -472,7 +504,8 @@ test('record the walkthrough', async ({ browser }, testInfo) => {
     cues.push({ at: at(), wav: lines[i].wav, say: step.say });
     await S('caption', step.cap);
     await step.act?.(S);
-    await page.waitForTimeout(Math.max(0, lines[i].seconds * 1000 + GAP - (Date.now() - began)));
+    const gap = HQ ? (steps[i + 1]?.ch || i === steps.length - 1 ? GAP_OUT : GAP_IN) : GAP;
+    await page.waitForTimeout(Math.max(0, lines[i].seconds * 1000 + gap - (Date.now() - began)));
     if (FAST) await page.screenshot({ path: path.join(outDir, 'frames', `${String(i + 1).padStart(2, '0')}.png`) });
   }
   await S('end', [
@@ -489,20 +522,60 @@ test('record the walkthrough', async ({ browser }, testInfo) => {
   await page.waitForTimeout(END_SECONDS * 1000);
   const length = at();
 
-  const video = page.video()!;
-  await context.close();
   const webm = path.join(outDir, 'walkthrough.webm');
-  await video.saveAs(webm);
+  let videoIn: string[];
+  if (HQ) {
+    await cdp!.send('Page.stopScreencast');
+    await context.close();
+    // Frames arrive only when the page changes: hold each until the next one.
+    const list = frames.map((f, i) => {
+      const end = i + 1 < frames.length ? frames[i + 1].t : start + length * 1000;
+      return `file '${f.file}'\nduration ${(Math.max(1, end - Math.max(f.t, start)) / 1000).toFixed(4)}`;
+    });
+    const concat = path.join(frameDir, 'list.txt');
+    fs.writeFileSync(concat, list.join('\n') + `\nfile '${frames[frames.length - 1].file}'\n`);
+    const firstAt = Math.max(0, (frames[0].t - start) / 1000);
+    videoIn = ['-f', 'concat', '-safe', '0', '-i', concat];
+    if (firstAt > 0.01) videoIn = ['-itsoffset', firstAt.toFixed(3), ...videoIn];
+  } else {
+    const video = page.video()!;
+    await context.close();
+    await video.saveAs(webm);
+    videoIn = ['-i', webm];
+  }
   fs.writeFileSync(path.join(outDir, 'chapters.txt'), chapters.join('\n') + '\n');
   fs.writeFileSync(path.join(outDir, 'narration.tsv'), cues.map((c) => `${c.at.toFixed(2)}\t${c.say}`).join('\n') + '\n');
 
   const inputs = cues.flatMap((c) => ['-i', c.wav]);
   const delays = cues.map((c, i) => `[${i + 1}:a]adelay=${Math.round(c.at * 1000)}:all=1[a${i}]`).join(';');
   const mix = cues.map((_, i) => `[a${i}]`).join('');
-  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', webm, ...inputs,
-    '-filter_complex', `${delays};${mix}amix=inputs=${cues.length}:normalize=0:duration=longest,apad,loudnorm=I=-16:TP=-1.5:LRA=11[aout]`,
-    '-map', '0:v', '-map', '[aout]', '-c:v', 'libx264', '-crf', '20', '-preset', 'medium', '-pix_fmt', 'yuv420p', '-r', '30',
+  // HQ voice chain: rumble cut, less boxiness, presence, de-ess, gentle compression, faint room tone, -14 LUFS (YouTube)
+  const voice = HQ
+    ? 'highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=2.5,deesser=i=0.4,acompressor=threshold=-20dB:ratio=3:attack=5:release=120:makeup=2'
+    : 'anull';
+  const room = HQ ? `;anoisesrc=colour=brown:amplitude=0.0035:sample_rate=48000:duration=${length.toFixed(3)},lowpass=f=3000[room]` : '';
+  const voiceMix = `${mix}amix=inputs=${cues.length}:normalize=0:duration=longest,apad,${voice}`;
+  const audio = HQ
+    ? `${delays}${room};${voiceMix}[v];[v][room]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1:LRA=11[aout]`
+    : `${delays};${voiceMix},loudnorm=I=-16:TP=-1.5:LRA=11[aout]`;
+  const video = HQ ? ['-vf', 'fps=30', '-c:v', 'libx264', '-crf', '14', '-preset', 'slow', '-tune', 'stillimage'] : ['-c:v', 'libx264', '-crf', '20', '-preset', 'medium'];
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', ...videoIn, ...inputs,
+    '-filter_complex', audio,
+    '-map', '0:v', '-map', '[aout]', ...video, '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-t', length.toFixed(3), '-movflags', '+faststart', path.join(outDir, 'walkthrough.mp4')]);
+  if (HQ) {
+    const LIMIT = 'alimiter=limit=0.5:attack=3:release=60:level=false';
+    // Second loudness pass: measure the mix, then apply linear gain to exactly -14 LUFS / -1 dBTP.
+    const mp4 = path.join(outDir, 'walkthrough.mp4');
+    const tmp = path.join(outDir, 'walkthrough.pre-loudnorm.mp4');
+    fs.renameSync(mp4, tmp);
+    const err = spawnSync('ffmpeg', ['-hide_banner', '-i', tmp, '-af', `${LIMIT},loudnorm=I=-14:TP=-1:LRA=11:print_format=json`, '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
+    const m = JSON.parse(err.slice(err.lastIndexOf('{'), err.lastIndexOf('}') + 1));
+    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', tmp, '-c:v', 'copy', '-af',
+      `${LIMIT},loudnorm=I=-14:TP=-1:LRA=11:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,aresample=48000`,
+      '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', mp4]);
+    fs.rmSync(tmp);
+  }
   console.log(`walkthrough.mp4 ${length.toFixed(1)} s, ${cues.length} lines, ${lines.reduce((a, l) => a + l.seconds, 0).toFixed(1)} s of speech`);
   console.log(chapters.join('\n'));
 });

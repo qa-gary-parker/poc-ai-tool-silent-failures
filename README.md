@@ -6,7 +6,7 @@
 
 > Exploratory PoC, throwaway by default. Written up in
 > [AI-Generated Playwright Tools: 1 in 4 Runs Returned Wrong Data With No Error](https://garyparker.dev/blog/ai-generated-playwright-tools-silent-failures).
-> Video: [youtu.be/lMKT-9azMO4](https://youtu.be/lMKT-9azMO4).
+> Video: [youtu.be/J93JSyiL0ho](https://youtu.be/J93JSyiL0ho).
 
 ## Method
 
@@ -89,6 +89,6 @@ node harness/run.mjs --gens 3     # reuses results/tools/*.mjs; delete them to g
 node app/server.mjs late-rows      # serve one version on :4310
 ```
 
-Generation needs a logged-in `claude` CLI. The video is recorded from `video/`: `npx playwright test -c video/playwright.config.ts` replays `results/runs.json` on `stage.html` and adds the narration (needs a local `~/bin/tts`).
+Generation needs a logged-in `claude` CLI. The video is recorded from `video/`: `npx playwright test -c video/playwright.config.ts` replays `results/runs.json` on `stage.html` and adds the narration (needs a local `~/bin/tts`). The published video uses `VOICE=gary SPEED=1.1 HQ=1`: a cloned voice, a 2x screen capture and -14 LUFS audio.
 
 MIT. Independent experiment; no affiliation with Anthropic, Microsoft or any vendor.
