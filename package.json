@@ -1,7 +1,7 @@
 {
   "name": "poc-ai-tool-silent-failures",
   "version": "1.0.0",
-  "description": "",
+  "description": "How often AI-generated Playwright tools return wrong data with no error when a site changes, and what catches it",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
