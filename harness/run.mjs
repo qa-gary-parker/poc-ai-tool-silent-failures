@@ -90,6 +90,33 @@ const sameOrders = (got) => {
 	});
 };
 
+// Postconditions written against the baseline page only: they know its count label,
+// its row markup and its error role, not any drift.
+async function openCount(page, baseUrl) {
+	await page.goto(baseUrl);
+	await page.waitForLoadState("networkidle");
+	if (await page.getByRole("alert").count()) throw new Error("check: the page shows an error");
+	return Number.parseInt(await page.getByTestId("open-count").textContent(), 10);
+}
+
+async function checkList(page, baseUrl, orders) {
+	const shown = await openCount(page, baseUrl);
+	if (shown !== orders.length) throw new Error(`check: page says ${shown} open orders, tool returned ${orders.length}`);
+	for (const o of orders) {
+		const row = page.locator(`[data-id="${o.id}"]`);
+		if (!(await row.count())) continue;
+		const digits = (await row.innerText()).replace(o.id, "").replace(/\D/g, "");
+		if (digits !== o.total.toFixed(2).replace(/\D/g, ""))
+			throw new Error(`check: ${o.id} total ${o.total} does not match the page`);
+	}
+}
+
+async function checkCancel(page, baseUrl, before) {
+	const after = await openCount(page, baseUrl);
+	if (after !== before - 1 || (await page.locator(`[data-id="${CANCEL_ID}"]`).count()))
+		throw new Error(`check: open orders went ${before} -> ${after}; ${CANCEL_ID} still listed or count wrong`);
+}
+
 async function attempt(file, task, drift, validate) {
 	return withApp(drift, async (page, baseUrl) => {
 		const started = Date.now();
@@ -97,11 +124,14 @@ async function attempt(file, task, drift, validate) {
 		let error;
 		try {
 			const tool = await load(file);
+			const before = validate === "checks" && task === "cancel" ? await openCount(page, baseUrl) : undefined;
 			result =
 				task === "list"
 					? await tool.listOpenOrders(page, baseUrl)
 					: await tool.cancelOrder(page, baseUrl, CANCEL_ID);
 			if (validate) (task === "list" ? listSchema : cancelSchema).parse(result);
+			if (validate === "checks")
+				task === "list" ? await checkList(page, baseUrl, result) : await checkCancel(page, baseUrl, before);
 			if (task === "cancel" && result?.cancelled === false) error = "tool reported cancelled: false";
 		} catch (e) {
 			error = String(e?.message ?? e).split("\n").slice(0, 12).join("\n");
@@ -131,15 +161,18 @@ for (let g = 1; g <= GENS; g++) {
 	}
 	for (const drift of drifts) {
 		for (const task of ["list", "cancel"]) {
-			for (const arm of ["generated", "generated+schema"]) {
-				const validate = arm === "generated+schema";
+			for (const [arm, validate] of [
+				["generated", false],
+				["generated+schema", "schema"],
+				["generated+checks", "checks"],
+			]) {
 				let file = genFile;
 				let r = await attempt(file, task, drift, validate);
 				let repairs = 0;
 				while (r.outcome === "loud" && repairs < REPAIRS) {
 					repairs++;
 					htmlCache[drift] ??= await renderedHtml(drift);
-					const next = `${OUT}/tools/gen${g}.${drift}.${task}.${validate ? "schema" : "plain"}.r${repairs}.mjs`;
+					const next = `${OUT}/tools/gen${g}.${drift}.${task}.${validate || "plain"}.r${repairs}.mjs`;
 					if (!existsSync(next)) {
 						console.log(`  repair ${repairs} gen${g} ${drift} ${task} ${arm}`);
 						writeFileSync(next, await ask(repairPrompt(readFileSync(file, "utf8"), r.error, htmlCache[drift])));
